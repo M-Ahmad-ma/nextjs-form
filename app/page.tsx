@@ -6,29 +6,24 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import image1 from "./assets/image1.jpeg";
-import image2 from "./assets/image2.jpeg";
-import icon from "./assets/nobg-icon.png";
-import payment from "./assets/payment.jpeg";
-import image3 from "./assets/image3.png";
-import textImage from "./assets/textimage.jpg";
-import bgimage from "./assets/bg-Image.jpeg";
-import check from "./assets/check.jpeg";
-import badge from './assets/badge.png'
+
 
 export default function Component() {
+
   return (
     <div
       className="min-h-screen flex flex-col items-center py-2 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bgimage.src})` }}
+      style={{ backgroundImage: `url('/assets/bg-Image.jpeg')` }}
     >
       <div className="bg-transparent rounded-lg p-4 md:p-8 max-w-7xl w-full mb-4 md:mb-8">
         <div className="text-center mb-6 md:mb-8">
           <h1 className="text-2xl md:text-4xl font-bold flex flex-col md:flex-row items-center justify-center gap-2 mb-2">
             <span className="text-4xl md:text-6xl font-bold md:mr-2">Try</span>
             <Image 
-              src={textImage} 
+              src="/assets/textimage.jpg" 
               alt="image" 
+              width={300}
+              height={300}
               className="w-full max-w-xs md:max-w-none md:w-auto mt-4"
             />
             <span className="text-3xl md:text-[50px] font-bold md:ml-4">for 14 Days</span>
@@ -101,9 +96,9 @@ export default function Component() {
                   </h2>
                 </div>
                 <div className="flex items-center gap-2 mt-1 sm:mt-0 mb-1">
-                  <Image
-                    src={payment}
-                    alt="Payment methods"
+                  <Image    
+                    src="/assets/payment.jpeg"
+                    alt="Payment methods"       
                     width={150}
                     height={20}
                     className="h-5 md:h-6 object-contain"
@@ -151,7 +146,7 @@ export default function Component() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-4 md:mb-8">
               <Image
-                src={badge}
+                src="/assets/badge.png"
                 alt="100% Money Back Guarantee"
                 width={100}
                 height={100}
@@ -185,7 +180,7 @@ export default function Component() {
                 <div className="">
                   <div className="flex justify-between sm:flex-row sm:items-center sm:justify-between mb-3 md:mb-0">
                     <div className="flex items-center gap-1.5 mb-1 sm:mb-0">
-                      <Image src={check} alt="check" width={20} height={20} />
+                      <Image src="/assets/check.jpeg" alt="check" width={20} height={20} />
                       <span className="font-[700] text-base md:text-[18px]">
                         Unlimited Breakouts
                       </span>
@@ -196,9 +191,11 @@ export default function Component() {
                   </div>
                   <div className="bg-[#FDFDFD] border-[2px] border-gray-200 p-2 rounded-xl overflow-hidden !shadow-lg">
                     <Image
-                      src={image1}
+                      src="/assets/image1.jpeg"
+                      width={400}
+                      height={400}
                       alt="Breakout Alert Chart"
-                      className="w-[400px] h-auto object-contain"
+                      className="object-contain"
                     />
                   </div>
                 </div>
@@ -208,7 +205,7 @@ export default function Component() {
                 <div>
                   <div className="flex flex-row justify-between sm:items-center sm:justify-between mb-3 md:mb-0">
                     <div className="flex items-center gap-1.5 mb-1 sm:mb-0">
-                      <Image src={check} alt="check" width={20} height={20} />
+                      <Image src="/assets/check.jpeg" alt="check" width={20} height={20} />
                       <span className="font-bold text-base md:text-lg">
                         Unlimited Setups
                       </span>
@@ -219,9 +216,11 @@ export default function Component() {
                   </div>
                   <div className="shadow-lg border-[2px] border-gray-200 rounded-xl bg-[#FDFDFD] overflow-hidden">
                     <Image
-                      src={image2}
+                      src="/assets/image2.jpeg"
+                      width={400}
+                      height={400}
                       alt="Setup Alert Chart"
-                      className="w-[400px] h-auto object-contain"
+                      className="object-contain"
                     />
                   </div>
                 </div>
@@ -246,8 +245,8 @@ export default function Component() {
       {/* Footer */}
       <footer className="bg-blue-50 w-full py-6 md:py-11 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs md:text-sm text-gray-600">
         <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 md:mb-0">
-          <div className="flex items-center gap-2">
-            <Image src={icon} alt="icon" width={54} height={54} />
+          <div className="flex items-center gap-2"> 
+            <Image src="/assets/nobg-icon.png" alt="icon" width={54} height={54} />
             <span className="font-semibold">Breakouts & Setups</span>
           </div>
           <span className="text-xs text-gray-500 mt-1 sm:mt-0">
