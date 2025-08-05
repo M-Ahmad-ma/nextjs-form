@@ -7,9 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-
 export default function Component() {
-
   return (
     <div
       className="min-h-screen flex flex-col items-center py-2 bg-cover bg-center bg-no-repeat"
@@ -19,14 +17,16 @@ export default function Component() {
         <div className="text-center mb-6 md:mb-8">
           <h1 className="text-2xl md:text-4xl font-bold flex flex-col md:flex-row items-center justify-center gap-2 mb-2">
             <span className="text-4xl md:text-6xl font-bold md:mr-2">Try</span>
-            <Image 
-              src="/assets/textimage.jpg" 
-              alt="image" 
+            <Image
+              src="/assets/textimage.jpg"
+              alt="image"
               width={300}
               height={300}
               className="w-full max-w-xs md:max-w-none md:w-auto mt-4"
             />
-            <span className="text-3xl md:text-[50px] font-bold md:ml-4">for 14 Days</span>
+            <span className="text-3xl md:text-[50px] font-bold md:ml-4">
+              for 14 Days
+            </span>
           </h1>
           <p className="text-base md:text-lg lg:text-[22px] font-bold md:font-[900] mt-5">
             <span className="text-[#FF0000] text-xl md:text-2xl font-bold">
@@ -45,7 +45,9 @@ export default function Component() {
           <div>
             <div className="mb-4 md:mb-6">
               <div className="flex items-center justify-between mb-1">
-                <h2 className="text-lg md:text-[20px] font-bold">Your Package</h2>
+                <h2 className="text-lg md:text-[20px] font-bold">
+                  Your Package
+                </h2>
                 <h2 className="text-lg md:text-[20px] font-bold">Price</h2>
               </div>
               <hr />
@@ -59,7 +61,10 @@ export default function Component() {
                     id="trial"
                     className="border-blue-400 text-blue-400 data-[state=checked]:bg-blue-400 data-[state=checked]:border-blue-400"
                   />
-                  <Label htmlFor="trial" className="text-sm md:text-base font-medium">
+                  <Label
+                    htmlFor="trial"
+                    className="text-sm md:text-base font-medium"
+                  >
                     Breakouts & Setups 14-Day Trial
                   </Label>
                 </RadioGroup>
@@ -91,14 +96,14 @@ export default function Component() {
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h2 className="text-lg md:text-[20px] font-bold flex items-center gap-2">
-                    <CreditCard className="w-4 h-4 md:w-5 md:h-5 text-gray-600" /> Payment
-                    Info
+                    <CreditCard className="w-4 h-4 md:w-5 md:h-5 text-gray-600" />{" "}
+                    Payment Info
                   </h2>
                 </div>
                 <div className="flex items-center gap-2 mt-1 sm:mt-0 mb-1">
-                  <Image    
+                  <Image
                     src="/assets/payment.jpeg"
-                    alt="Payment methods"       
+                    alt="Payment methods"
                     width={150}
                     height={20}
                     className="h-5 md:h-6 object-contain"
@@ -129,7 +134,7 @@ export default function Component() {
                 <span>AMOUNT</span>
               </div>
               <div className="flex justify-between text-sm md:text-[16px] font-medium">
-                <span>Breakouts & Setups 14-Day Trial</span> 
+                <span>Breakouts & Setups 14-Day Trial</span>
                 <span>$7</span>
               </div>
             </div>
@@ -140,7 +145,10 @@ export default function Component() {
                 htmlFor="terms"
                 className="text-xs md:text-[15px] font-medium text-gray-600 leading-relaxed"
               >
-                With my order today I get a 14-Day Trial to B&S. If I don't cancel before my trial ends, I will be billed $99.00 per month. I also agree to the Terms of Service and Privacy Policy.
+                With my order today I get a 14-Day Trial to B&amp;S. If I
+                don&apos;t cancel before my trial ends, I will be billed $99.00
+                per month. I also agree to the Terms of Service and Privacy
+                Policy.
               </Label>
             </div>
 
@@ -157,7 +165,11 @@ export default function Component() {
                   100% MONEY BACK GUARANTEE
                 </h3>
                 <p className="text-xs md:text-sm text-gray-600">
-                  We're so confident that this is exactly what you need to get from where you are to where you want to be, that we offer a 100% money back guarantee. If for some reason you aren't on your way to real success in the first 30 days, email us and we will take care of your refund!
+                  We're so confident that this is exactly what you need to get
+                  from where you are to where you want to be, that we offer a
+                  100% money back guarantee. If for some reason you aren't on
+                  your way to real success in the first 30 days, email us and we
+                  will take care of your refund!
                 </p>
               </div>
             </div>
@@ -180,7 +192,12 @@ export default function Component() {
                 <div className="">
                   <div className="flex justify-between sm:flex-row sm:items-center sm:justify-between mb-3 md:mb-0">
                     <div className="flex items-center gap-1.5 mb-1 sm:mb-0">
-                      <Image src="/assets/check.jpeg" alt="check" width={20} height={20} />
+                      <Image
+                        src="/assets/check.jpeg"
+                        alt="check"
+                        width={20}
+                        height={20}
+                      />
                       <span className="font-[700] text-base md:text-[18px]">
                         Unlimited Breakouts
                       </span>
@@ -205,7 +222,12 @@ export default function Component() {
                 <div>
                   <div className="flex flex-row justify-between sm:items-center sm:justify-between mb-3 md:mb-0">
                     <div className="flex items-center gap-1.5 mb-1 sm:mb-0">
-                      <Image src="/assets/check.jpeg" alt="check" width={20} height={20} />
+                      <Image
+                        src="/assets/check.jpeg"
+                        alt="check"
+                        width={20}
+                        height={20}
+                      />
                       <span className="font-bold text-base md:text-lg">
                         Unlimited Setups
                       </span>
@@ -245,8 +267,13 @@ export default function Component() {
       {/* Footer */}
       <footer className="bg-blue-50 w-full py-6 md:py-11 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-xs md:text-sm text-gray-600">
         <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 md:mb-0">
-          <div className="flex items-center gap-2"> 
-            <Image src="/assets/nobg-icon.png" alt="icon" width={54} height={54} />
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/nobg-icon.png"
+              alt="icon"
+              width={54}
+              height={54}
+            />
             <span className="font-semibold">Breakouts & Setups</span>
           </div>
           <span className="text-xs text-gray-500 mt-1 sm:mt-0">
@@ -255,10 +282,14 @@ export default function Component() {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center">
           <div className="flex gap-2 md:gap-4">
-            <a href="#" className="hover:underline">Terms of Service</a>
-            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="#" className="hover:underline">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:underline">
+              Privacy Policy
+            </a>
           </div>
-          <span>&copy;breakoutsandsetups. All rights reserved.</span>
+          <span>&copy; breakoutsandsetups. All rights reserved.</span>
         </div>
       </footer>
     </div>
