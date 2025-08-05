@@ -1,102 +1,278 @@
 import Image from "next/image";
+import { Heart, User, CreditCard, Check } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import image1 from "./assets/image1.jpeg";
+import image2 from "./assets/image2.jpeg";
+import icon from "./assets/nobg-icon.png";
+import payment from "./assets/payment.jpeg";
+import image3 from "./assets/image3.png";
+import textImage from "./assets/textimage.jpg";
+import bgimage from "./assets/bg-Image.jpeg";
+import check from "./assets/check.jpeg";
+import badge from './assets/badge.png'
 
-export default function Home() {
+export default function Component() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div
+      className="min-h-screen flex flex-col items-center py-2 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${bgimage.src})` }}
+    >
+      <div className="bg-transparent rounded-lg  p-8 max-w-7xl w-full mb-8  ">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold flex items-center justify-center gap-2 mb-2">
+            <span className="text-6xl font font-bold mr-2">Try</span>{" "}
+            <Image src={textImage} width={500} alt="image" />{" "}
+            <span className="font-[700] text-[50px] ml-4">for 14 Days</span>
+          </h1>
+          <p className="text-lg text-[22px] font-[900]">
+            <span className="text-[#FF0000] text-2xl font-bold">
+              Claim your 14-Day Trial Now
+            </span>{" "}
+            <span className="font-[500]">to Find</span>{" "}
+            <span className="font-bold">Breakouts & Setups</span>{" "}
+            <span className="text-[#008000] font-semibold italic">
+              In Real Time
+            </span>
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Column: Form */}
+          <div>
+            <div className="mb-6">
+              <div className="flex items-center justify-between mb-1">
+                <h2 className="text-[20px] font-[700]">Your Package</h2>
+                <h2 className="text-[20px] font-[700]">Price</h2>
+              </div>
+              <hr />
+              <div className="relative border-[2px] border-[#D4E1FF] rounded-md p-4 flex items-center justify-between with-overlay">
+                <RadioGroup
+                  defaultValue="trial"
+                  className="flex items-center gap-2"
+                >
+                  <RadioGroupItem
+                    value="trial"
+                    id="trial"
+                    className="border-blue-400 text-blue-400 data-[state=checked]:bg-blue-400 data-[state=checked]:border-blue-400"
+                  />
+                  <Label htmlFor="trial" className="text-base font-medium">
+                    Breakouts & Setups 14-Day Trial
+                  </Label>
+                </RadioGroup>
+                <span className="text-[16px] font-[400] ">$7</span>
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <h2 className="text-[20px] font-[700]  flex items-center gap-2">
+                <User className="w-5 h-5 text-gray-900 font-bold" /> Contact
+                Information
+              </h2>
+              <div className="w-full text-2xl bg-black h-[2.5px] mb-3 my-2"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Input
+                  placeholder="Enter Your Full Name"
+                  className="rounded-none border-0 border-b-2 border-gray-400 focus-visible:ring-0 h-[46px]"
+                />
+
+                <Input
+                  type="email"
+                  placeholder="Enter Your Email Address"
+                  className="rounded-none border-0 border-b-2 border-gray-400 focus-visible:ring-0 h-[46px]"
+                />
+              </div>
+            </div>
+
+            <div className="">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-[20px] font-[700] mb-1 flex items-center gap-2">
+                    <CreditCard className="w-5 h-5 text-gray-600" /> Payment
+                    Info
+                  </h2>
+                </div>
+                <div className="flex items-center gap-2 mb-1">
+                  <Image
+                    src={payment}
+                    alt="Visa"
+                    width={150}
+                    height={20}
+                    className="h-6 object-contain"
+                  />
+                </div>
+              </div>
+              <div className="w-full text-2xl bg-black h-[3px] mb-3 my-2"></div>
+              <Input
+                placeholder="Credit Card Number"
+                className="mb-4 rounded-none border-0 border-b-2 border-gray-400 focus-visible:ring-0 h-[46px]"
+              />
+              <div className="grid grid-cols-2 gap-4">
+                <Input
+                  placeholder="Expiry"
+                  className="rounded-none border-0 border-b-2 border-gray-400 focus-visible:ring-0 h-[46px]"
+                />
+
+                <Input
+                  placeholder="CVC Code"
+                  className="rounded-none border-0 border-b-2 border-gray-400 focus-visible:ring-0 h-[46px]"
+                />
+              </div>
+            </div>
+
+            <div className="mb-6 mt-6">
+              <div className="flex justify-between text-gray-600 font-semibold border-b pb-2 mb-2">
+                <span>ITEM</span>
+                <span>AMOUNT</span>
+              </div>
+              <div className="flex justify-between text-[16px] font-[400]">
+                <span>Breakouts & Setups 14-Day Trial</span> 
+                <span>$7</span>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-2 mb-6">
+              <Checkbox id="terms" className="mt-1" />
+              <Label
+                htmlFor="terms"
+                className="text-[15px] font-[400] text-gray-600 leading-relaxed"
+              >
+                With my order today I get a 14-Day Trial to B&S. If I don&apos;t
+                cancel before my trial ends, I will be billed $99.00 per month.
+                I also agree to the Terms of Service and Privacy Policy.
+              </Label>
+            </div>
+
+            <div className="flex items-center gap-4 mb-8">
+              <Image
+                src={badge}
+                alt="100% Money Back Guarantee"
+                width={200}
+                height={300}
+                className="w-24 h-24 object-contain"
+              />
+              <div>
+                <h3 className="text-[20px] font-[700] mb-2">
+                  100% MONEY BACK GUARANTEE
+                </h3>
+                <p className="text-sm text-gray-600">
+                  We&apos;re so confident that this is exactly what you need to
+                  get from where you are to where you want to be, that we offer
+                  a 100% money back guarantee. If for some reason you
+                  aren&apos;t on your way to real success in the first 30 days,
+                  email us and we will take care of your refund!
+                </p>
+              </div>
+            </div>
+
+            <Button className="w-full bg-[#D71E46] hover:bg-red-700 text-white py-12 text-[20px] font-[700] rounded-md flex flex-col items-center leading-tight">
+              Complete My Order Now!
+              <span className="text-[22px] font-[400]">
+                Join Breakouts & Setups Now!
+              </span>
+            </Button>
+          </div>
+
+          {/* Right Column: Benefits */}
+          <div className="ml-28">
+            <h2 className="text-[22px] font-[700] mb-20 ml-8 text-gray-600">
+              Join Breakouts & Setups Now to Get:
+            </h2>
+            <div className="space-y-6">
+              <Card className="!border-none !shadow-none bg-transparent flex items-center gap-4">
+                {/* <Check className="w-6 h-6 text-green-600" /> */}
+                <div className="">
+                  <div className="flex gap-40 items-center ">
+                    <div className="flex items-center gap-1.5">
+                      <span>
+                        <Image src={check} alt="check" />
+                      </span>
+                      <span className="font-[800] text-[18px]">
+                        Unlimited Breakouts
+                      </span>
+                    </div>
+                    <span className="text-[22px] font-400 line-through">
+                      $49
+                    </span>
+                  </div>
+                  <div className="bg-[#FDFDFD] border-[2px] border-gray-200 p-2 rounded-xl overflow-hidden !shadow-lg">
+                    <Image
+                      src={image1}
+                      alt="Breakout Alert Chart"
+                      width={300}
+                      // height={100}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </div>
+              </Card>
+
+              {/* <Image src={image2} width={400} alt="image" /> */}
+              <Card className="!border-none !shadow-none bg-transparent flex items-center gap-4">
+                <div className="">
+                  <div className="flex gap-40  items-center ">
+                    <div className="flex items-center gap-1.5">
+                      <span>
+                        <Image src={check} alt="check" />
+                      </span>
+                      <span className="font-[800] text-[18px]">
+                        Unlimited Setups
+                      </span>
+                    </div>
+                    <span className="text-[22px] font-[400] line-through">
+                      $25
+                    </span>
+                  </div>
+                  <div className="shadow-lg border-[2px] border-gray-200 rounded-xl bg-[#FDFDFD] overflow-hidden">
+                    <Image
+                      src={image2}
+                      alt="Setup Alert Chart"
+                      width={300}
+                      // height={100}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-lg text-gray-600">
+                TOTAL VALUE: <span className="line-through">$99</span>
+              </p>
+              <p className="text-[40px] font-[700] text-zinc-800 ">
+                TODAY ONLY: $7!
+              </p>
+              <p className="text-[40px] italic text-gray-700 font-[500]">
+                One-Time Payment
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-blue-50 w-full py-11  sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+        <div className="flex items-center gap-2 mb-4 md:mb-0">
+          <Image src={icon} alt="icon" />
+          <span className="font-semibold">Breakouts & Setups</span>
+          <span className="text-xs text-gray-500">
+            Powered By Market Terminal
+          </span>
+        </div>
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <a href="#" className="hover:underline">
+            Terms of Service
+          </a>
+          <a href="#" className="hover:underline">
+            Privacy Policy
+          </a>
+          <span>&copy;breakoutsandsetups. All rights reserved.</span>
+        </div>
       </footer>
     </div>
   );
